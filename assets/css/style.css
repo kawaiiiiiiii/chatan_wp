@@ -53,6 +53,9 @@ main .articles-wrap .articles img {
 main .articles-wrap .articles span, main .articles-wrap .articles p {
   padding: 10px 0 0 10px;
 }
+main .articles-wrap .articles span {
+  letter-spacing: 0.12em;
+}
 main .articles-wrap .articles a {
   display: block;
   margin-top: 30%;

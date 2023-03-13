@@ -31,6 +31,7 @@ main{
     h2{
         font-size: 2rem;
         text-align: center;
+        
     }
 
     .articles-wrap{
@@ -48,6 +49,7 @@ main{
         
         span{
             display: block;
+            
         }
         .articles{
             width: 31%;
@@ -67,6 +69,10 @@ main{
             }
             span,p{
                 padding: 10px 0 0 10px;
+            }
+
+            span{
+                letter-spacing: 0.12em;
             }
 
 

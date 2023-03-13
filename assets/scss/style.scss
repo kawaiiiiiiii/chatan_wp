@@ -1,0 +1,102 @@
+//ブレイクポイント
+$spmax : 768px ; //スマホ表示～767px
+$pcmin : 768px ; //PC表示　768px~
+
+// サイト幅
+$spwidth : 100%;
+$pcwidth : 1152px;
+
+//レスポンシブ対応
+@mixin sp{
+    @media screen and (max-width: $spmax){
+        @content;
+    }
+}
+
+//テキストfont
+*{
+    font-family:"游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+}
+
+//メインコンテンツ(Latest Articles)
+main{
+    max-width: $pcwidth;
+    margin: 0 auto;
+    text-align: center;
+
+    @include sp{
+        width: $spwidth;
+    }
+
+    h2{
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .articles-wrap{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+        width: 90%;
+        gap: 3%;
+
+        @include sp{
+            display: block;
+        }
+
+        
+        span{
+            display: block;
+        }
+        .articles{
+            width: 31%;
+            margin: 30px 0; 
+            text-align: start;
+
+            @include sp{
+                width: 100%;
+            }
+            
+            &:hover{
+                box-shadow: 0 0 20px  rgb(190, 190, 190);
+            }
+            img{
+                display: block;
+                width: 100%;
+            }
+            span,p{
+                padding: 10px 0 0 10px;
+            }
+
+
+            a{
+                display: block;
+                margin-top: 30%;
+                padding: 15px 15px 30px;
+                text-align: end;
+                // &::after{
+                //     content: "";
+                //     display: block;
+                //     border-bottom: 1px solid black;
+                //     width: 10px;
+                //     left: 0;
+                // }
+            }
+        }
+    }
+
+}
+
+//フッター
+footer{
+    color: white;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    margin-top: 50px;
+}
+
+

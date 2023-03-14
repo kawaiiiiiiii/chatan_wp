@@ -50,14 +50,39 @@ main .articles-wrap .articles img {
   display: block;
   width: 100%;
 }
-main .articles-wrap .articles span, main .articles-wrap .articles p {
-  padding: 10px 0 0 10px;
+main .articles-wrap .articles h3 {
+  padding: 10px 10px 0 10px;
+  height: 100px;
 }
-main .articles-wrap .articles a {
+main .articles-wrap .articles .date {
+  padding: 10px 10px 0 10px;
+  letter-spacing: 0.12em;
+}
+main .articles-wrap .articles .read {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+main .articles-wrap .articles .read a {
+  position: relative;
   display: block;
-  margin-top: 30%;
-  padding: 15px 15px 30px;
+  height: 10%;
+  padding: 15px;
   text-align: end;
+}
+main .articles-wrap .articles .read a::after {
+  position: absolute;
+  content: "";
+  display: block;
+  border-bottom: 2px solid black;
+  width: 15%;
+  padding-right: 15px;
+  right: 15px;
+}
+main .articles-wrap .articles .read a:hover::after {
+  border-bottom: 2px solid black;
+  width: 75%;
+  transition: 0.8s;
 }
 
 footer {

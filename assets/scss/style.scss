@@ -1,40 +1,41 @@
 //ブレイクポイント
-$spmax : 768px ; //スマホ表示～767px
-$pcmin : 768px ; //PC表示　768px~
+$spmax : 768px; //スマホ表示～767px
+$pcmin : 768px; //PC表示　768px~
 
 // サイト幅
 $spwidth : 100%;
 $pcwidth : 1152px;
 
 //レスポンシブ対応
-@mixin sp{
-    @media screen and (max-width: $spmax){
+@mixin sp {
+    @media screen and (max-width: $spmax) {
         @content;
     }
 }
 
 //テキストfont
-*{
-    font-family:"游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+* {
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    // border: 1px solid #000;
 }
 
 //メインコンテンツ(Latest Articles)
-main{
+main {
     max-width: $pcwidth;
     margin: 0 auto;
     text-align: center;
 
-    @include sp{
+    @include sp {
         width: $spwidth;
     }
 
-    h2{
+    h2 {
         font-size: 2rem;
         text-align: center;
-        
+
     }
 
-    .articles-wrap{
+    .articles-wrap {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -42,52 +43,79 @@ main{
         width: 90%;
         gap: 3%;
 
-        @include sp{
+        @include sp {
             display: block;
         }
 
-        
-        span{
+
+        span {
             display: block;
-            
+
         }
-        .articles{
+
+        .articles {
             width: 31%;
-            margin: 30px 0; 
+            margin: 30px 0;
             text-align: start;
 
-            @include sp{
+            @include sp {
                 width: 100%;
             }
-            
-            &:hover{
-                box-shadow: 0 0 20px  rgb(190, 190, 190);
+
+            &:hover {
+                box-shadow: 0 0 20px rgb(190, 190, 190);
             }
-            img{
+
+            img {
                 display: block;
                 width: 100%;
             }
-            span,p{
-                padding: 10px 0 0 10px;
+
+            h3 {
+                padding: 10px 10px 0 10px;
+                height: 100px;
+
             }
 
-            span{
+            .date {
+                padding: 10px 10px 0 10px;
                 letter-spacing: 0.12em;
             }
 
+            .read {
+                width: 100%;
+                display: flex;
+                justify-content: end;
 
-            a{
-                display: block;
-                margin-top: 30%;
-                padding: 15px 15px 30px;
-                text-align: end;
-                // &::after{
-                //     content: "";
-                //     display: block;
-                //     border-bottom: 1px solid black;
-                //     width: 10px;
-                //     left: 0;
-                // }
+                a {
+                    position: relative;
+                    display: block;
+                    height: 10%;
+                    padding: 15px;
+                    text-align: end;
+
+
+
+
+                    &::after {
+                        position: absolute;
+                        content: "";
+                        display: block;
+                        border-bottom: 2px solid black;
+                        width: 15%;
+                        padding-right: 15px;
+                        right: 15px;
+
+                    }
+                        &:hover::after {
+                            border-bottom: 2px solid black;
+                            width: 75%;
+                            transition: .8s;
+
+                        }
+
+
+                }
             }
         }
     }
@@ -95,7 +123,7 @@ main{
 }
 
 //フッター
-footer{
+footer {
     color: white;
     background-color: black;
     display: flex;
@@ -104,5 +132,3 @@ footer{
     height: 100px;
     margin-top: 50px;
 }
-
-

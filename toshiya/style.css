@@ -1,7 +1,41 @@
 .menu{
     display: flex;
     justify-content: end;
+    max-width: 1152px;
+    margin: 0 auto;
 }
+
 .kv{
+    max-width: 1152px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
     position: relative;
+}
+
+.kv-png{
+    position: absolute;
+    top: 16vh;
+    left: 8vw;
+}
+
+.kv-text{
+    position: absolute;
+    top: 48.8vh;
+    left: 54vw;
+}
+
+.logo{
+    position: absolute;
+    top: 0vh;
+    left: 0vw;
+    z-index: 1;
+}
+
+
+.text{
+    display: flex;
+    max-width: 1152px;
+    text-align: center;
 }

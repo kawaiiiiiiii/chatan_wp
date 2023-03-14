@@ -41,6 +41,31 @@
     
 
 <?php endif; ?>
+
+<!-- 6投稿との闘い -->
+<?php if (have_posts()): ?>
+        <ul>
+            <?php while (have_posts()): the_post(); ?>
+            <li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
+            <?php endwhile; ?>
+        </ul>
+
+        <!-- カスタム投稿全件数取得 -->
+        <?php global $wp_query; $count = $wp_query->found_posts;?>
+
+        <!-- この部分がajaxで追加読み込みする箇所 -->
+        <!-- javascript側に渡したい値は、data属性を使って指定 -->
+        <ul class="load" data-count="<?php echo $count; ?>"
+        data-post-type="news" ></ul>
+
+        <!-- 初期表示件数が全件数より少ない場合、もっと読み込むボタンを表示 -->
+        <?php if($count > 6): ?>
+        <button class="more_btn">もっと読み込む</button>
+        <?php endif; ?>
+
+        <?php endif; ?> <!-- END if (have_posts()) -->
+
+<!--　ここまで  -->
     </div>
     </main>
 <!-- フッターの読み込み -->

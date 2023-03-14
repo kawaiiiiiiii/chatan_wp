@@ -36,7 +36,8 @@
     if (7 <= $posts):
 ?>
     <!-- 表示する要素 -->
-    <a href="<?php the_permalink() ?>">もっとみる</a>
+    <a href="">もっとみるー</a>
+    
     
 
 <?php endif; ?>

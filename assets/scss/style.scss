@@ -4,7 +4,7 @@ $pcmin : 768px; //PC表示　768px~
 
 // サイト幅
 $spwidth : 100%;
-$pcwidth : 1152px;
+$pcwidth : 1152px;//その内側1024px
 
 //レスポンシブ対応
 @mixin sp {
@@ -30,6 +30,7 @@ main {
     }
 
     h2 {
+        color: red;
         font-size: 2rem;
         text-align: center;
 

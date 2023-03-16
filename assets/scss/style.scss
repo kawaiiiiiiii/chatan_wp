@@ -5,7 +5,7 @@ $pcmin : 768px; //PC表示　768px~
 // サイト幅
 $spwidth : 100%;
 $pcwidth : 1152px;//その内側1024px
-
+$pcwidth-inside : 1024px;
 //レスポンシブ対応
 @mixin sp {
     @media screen and (max-width: $spmax) {
@@ -42,10 +42,11 @@ main {
 
         justify-content: center;
         margin: 0 auto;
-        width: 88.8%;
+        width: $pcwidth-inside;
         gap: 3%;
 
         @include sp {
+
             display: block;
         }
 
@@ -113,7 +114,6 @@ main {
 
                     }
                         &:hover::after {
-                            border-bottom: 2px solid black;
                             width: 75%;
                             transition: .8s;
 
@@ -136,4 +136,66 @@ footer {
     justify-content: center;
     height: 100px;
     margin-top: 50px;
+}
+
+
+// やすは.html
+// ヘッター
+header{
+    height: 150px;
+    margin: 0 auto;
+
+    nav{
+        width: $pcwidth;
+        margin: 0 auto;
+        ul{
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            gap: 30px;
+
+        }
+    }
+}
+
+// kv
+.kv{
+    width: $pcwidth;
+    margin: 0 auto;
+    span{
+        display: block;
+        position: relative;
+        width: $pcwidth;
+        margin: 0 auto;
+        
+        img{
+            display: block;
+            width: $pcwidth-inside;
+            margin: 0 auto;
+            
+        }
+
+        &::before{
+            position: absolute;
+            content: url(/folder/logo.png);
+            top: -25%;
+            left: 0;
+            width: 100%; 
+        }
+
+        &::after{
+            position: absolute;
+            content: url(/folder/visual_text_pc.png);
+            bottom: -55px;
+            right:0;
+           
+        }
+        
+    }
+    h1{
+        margin: 20px auto;
+        font-size: 1.5rem;
+    }
+
 }

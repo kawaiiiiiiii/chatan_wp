@@ -30,6 +30,17 @@
             
             ?>
             <!-- メインループここまで -->
+            <?php 
+    $count_posts = wp_count_posts();//投稿数の取得
+    $posts = $count_posts->publish;//publish→公開済み
+    //記事数が6より多かったら以下の要素を表示する
+    if (7 <= $posts):
+?>
+    <!-- 表示する要素 -->
+    <a href="<?php the_permalink() ?>">もっとみる</a>
+    
+
+<?php endif; ?>
 
 
      

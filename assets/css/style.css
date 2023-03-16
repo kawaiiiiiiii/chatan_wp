@@ -22,7 +22,7 @@ main .articles-wrap {
   flex-wrap: wrap;
   justify-content: center;
   margin: 0 auto;
-  width: 88.8%;
+  width: 1024px;
   gap: 3%;
 }
 @media screen and (max-width: 768px) {
@@ -81,7 +81,6 @@ main .articles-wrap .articles .read a::after {
   right: 15px;
 }
 main .articles-wrap .articles .read a:hover::after {
-  border-bottom: 2px solid black;
   width: 75%;
   transition: 0.8s;
 }
@@ -94,4 +93,53 @@ footer {
   justify-content: center;
   height: 100px;
   margin-top: 50px;
+}
+
+header {
+  height: 150px;
+  margin: 0 auto;
+}
+header nav {
+  width: 1152px;
+  margin: 0 auto;
+}
+header nav ul {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 30px;
+}
+
+.kv {
+  width: 1152px;
+  margin: 0 auto;
+}
+.kv span {
+  display: block;
+  position: relative;
+  width: 1152px;
+  margin: 0 auto;
+}
+.kv span img {
+  display: block;
+  width: 1024px;
+  margin: 0 auto;
+}
+.kv span::before {
+  position: absolute;
+  content: url(/folder/logo.png);
+  top: -25%;
+  left: 0;
+  width: 100%;
+}
+.kv span::after {
+  position: absolute;
+  content: url(/folder/visual_text_pc.png);
+  bottom: -55px;
+  right: 0;
+}
+.kv h1 {
+  margin: 20px auto;
+  font-size: 1.5rem;
 }/*# sourceMappingURL=style.css.map */

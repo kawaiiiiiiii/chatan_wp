@@ -30,7 +30,7 @@ main {
     }
 
     h2 {
-        color: red;
+        
         font-size: 2rem;
         text-align: center;
 
@@ -39,9 +39,10 @@ main {
     .articles-wrap {
         display: flex;
         flex-wrap: wrap;
+
         justify-content: center;
         margin: 0 auto;
-        width: 90%;
+        width: 88.8%;
         gap: 3%;
 
         @include sp {
@@ -93,7 +94,9 @@ main {
                     display: block;
                     height: 10%;
                     padding: 15px;
+                    padding-bottom: 100px;
                     text-align: end;
+
 
 
 
@@ -105,6 +108,7 @@ main {
                         border-bottom: 2px solid black;
                         width: 15%;
                         padding-right: 15px;
+                        // padding-bottom: 15px;
                         right: 15px;
 
                     }
